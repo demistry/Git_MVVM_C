@@ -15,10 +15,12 @@ class AppCoordinator : Coordinator {
     
     init(navigationController : UINavigationController) {
         self.navigationController = navigationController
+        //navigationController.isNavigationBarHidden = true
     }
     
     func start() {
-        
+        let vc = ViewController.instantiate()
+        navigationController.pushViewController(vc, animated: true)
     }
     
     
